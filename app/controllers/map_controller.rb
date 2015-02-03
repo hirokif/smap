@@ -4,7 +4,8 @@ class MapController < ApplicationController
     @hash = Gmaps4rails.build_markers(@places) do |place, marker|
       marker.lat place.latitude
       marker.lng place.longitude
-      marker.infowindow place.description
+      #marker.infowindow place.description
+      marker.infowindow place.title
       marker.json({title: place.title})
     end
   end
