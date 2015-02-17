@@ -8,7 +8,8 @@ class MapController < ApplicationController
       marker.infowindow place.title
       #marker.json({title: place.title})
       marker.picture({
-        "url" => '/assets/markers/marker' + place.title + '.png',
+      # "url" => '/assets/markers/marker' + place.title + '.png',
+        "url" => 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + place.title + '|add8e6|000000',
         "width" => 32,
         "height" => 37
       })
