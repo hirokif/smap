@@ -9,7 +9,7 @@ class MapController < ApplicationController
       #marker.json({title: place.title})
       marker.picture({
       # "url" => '/assets/markers/marker' + place.title + '.png',
-        "url" => 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + place.title + '|add8e6|000000',
+        "url" => 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + place.title + '|' + place.color + '|000000',
         "width" => 32,
         "height" => 37
       })
