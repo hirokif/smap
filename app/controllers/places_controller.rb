@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
   # GET /places
   # GET /places.json
   def index
-    @places = Place.all
+    @places = Place.all.order(:id)
   end
 
   # GET /places/1
@@ -69,6 +69,6 @@ class PlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:title, :description, :address, :latitude, :longitude)
+      params.require(:place).permit(:title, :color, :description, :address, :latitude, :longitude)
     end
 end
